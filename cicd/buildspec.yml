@@ -12,6 +12,6 @@ phases:
       - ./install-terraform.sh
       - ./configure-named-profile.sh
 
-  buid:
+  build:
     commands:
       - ./apply-terraform.sh
