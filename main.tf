@@ -1,9 +1,14 @@
 terraform {
   required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "4.36.0"
-    }
+    aws = "~> 3.4"
+    archive = "~> 1.3"
+  }
+
+  backend "s3" {
+    region = "us-east-1"
+    bucket = "aws-terraform-github-test"
+    encrypt = true
+    key = "terraform.tfstate"
   }
 }
 
